@@ -1,7 +1,5 @@
 ../Drivers/Device_Drivers/DS1307/DS1307.c:11:16:BCD2DEC	16	static
 ../Drivers/Device_Drivers/DS1307/DS1307.c:15:16:DEC2BCD	24	static
-../Drivers/Device_Drivers/DS1307/DS1307.c:21:16:I2C_Write	40	static
-../Drivers/Device_Drivers/DS1307/DS1307.c:28:16:I2C_Read	40	static
-../Drivers/Device_Drivers/DS1307/DS1307.c:35:15:Ds1307_Init	24	static
-../Drivers/Device_Drivers/DS1307/DS1307.c:57:15:Ds1307_Read_Time	16	static
-../Drivers/Device_Drivers/DS1307/DS1307.c:88:15:Ds1307_Write_Time	16	static
+../Drivers/Device_Drivers/DS1307/DS1307.c:21:15:Ds1307_Init	24	static
+../Drivers/Device_Drivers/DS1307/DS1307.c:42:15:Ds1307_Read_Time	16	static
+../Drivers/Device_Drivers/DS1307/DS1307.c:73:15:Ds1307_Write_Time	16	static

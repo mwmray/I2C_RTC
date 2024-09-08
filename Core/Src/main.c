@@ -45,7 +45,9 @@ I2C_HandleTypeDef hi2c1;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-ds1307_t CLK;
+ds1307_t CLK = {
+
+};
 uint32_t str[50];
 /* USER CODE END PV */
 
@@ -93,7 +95,7 @@ int main(void) {
 	MX_I2C1_Init();
 	MX_USART1_UART_Init();
 	/* USER CODE BEGIN 2 */
-	if (Ds1307_Init(&CLK, &hi2c1) == DS1307_SUCCESS) {
+	if (Ds1307_Init(&CLK) == DS1307_SUCCESS) {
 		HAL_UART_Transmit(&huart1, "clock ok\n\r", strlen("clock ok\n\r"), 100);
 	} else {
 		HAL_UART_Transmit(&huart1, "clock is not ok\n\r",
@@ -105,8 +107,9 @@ int main(void) {
 	/* USER CODE BEGIN WHILE */
 	while (1) {
 		Ds1307_Read_Time(&CLK);
-		uint8_t length = sprintf(str, "%02d:%02d:%02d Day %02d %02d/%02d/%04d\n\r",
-				CLK.hour, CLK.min, CLK.sec, CLK.day, CLK.date, CLK.month, CLK.year);
+		uint8_t length = sprintf(str,
+				"%02d:%02d:%02d Day %02d %02d/%02d/%04d\n\r", CLK.hour, CLK.min,
+				CLK.sec, CLK.day, CLK.date, CLK.month, CLK.year);
 		Ds1307_Write_Time(&CLK);
 		HAL_UART_Transmit(&huart1, str, strlen(str), 100);
 		HAL_Delay(500);

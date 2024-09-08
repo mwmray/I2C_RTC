@@ -1,7 +1,5 @@
-DS1307.c:11:16:BCD2DEC	1
-DS1307.c:15:16:DEC2BCD	1
-DS1307.c:21:16:I2C_Write	1
-DS1307.c:28:16:I2C_Read	1
-DS1307.c:35:15:Ds1307_Init	2
-DS1307.c:57:15:Ds1307_Read_Time	5
-DS1307.c:88:15:Ds1307_Write_Time	3
+../Drivers/Device_Drivers/DS1307/DS1307.c:11:16:BCD2DEC	1
+../Drivers/Device_Drivers/DS1307/DS1307.c:15:16:DEC2BCD	1
+../Drivers/Device_Drivers/DS1307/DS1307.c:21:15:Ds1307_Init	2
+../Drivers/Device_Drivers/DS1307/DS1307.c:42:15:Ds1307_Read_Time	5
+../Drivers/Device_Drivers/DS1307/DS1307.c:73:15:Ds1307_Write_Time	3
